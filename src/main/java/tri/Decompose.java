@@ -33,7 +33,7 @@ public class Decompose {
             String marque = elements[1];
             String nom = elements[2];
             String nutritionGrade = elements[3];
-            //System.out.println(marque);
+
             if (!categorie.contains(catego)) {
                 categorie.add(catego);
                 System.out.println(catego);
