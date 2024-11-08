@@ -10,7 +10,7 @@ public class ScoreNutitionnel implements Serializable {
     @Column(name ="SCORE")
     private String score;
     /**
-     * constructeur vide pour jpa
+     * constructeur vide pour JPA
      */
     public ScoreNutitionnel() {
     }
