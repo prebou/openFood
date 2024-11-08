@@ -17,6 +17,16 @@ public class Marque implements Serializable {
     public Marque() {
     }
 
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Marque{");
+        sb.append("id=").append(id);
+        sb.append(", nomMarque='").append(nomMarque).append('\'');
+        sb.append(", dateApparition='").append(dateApparition).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
+
     public int getId() {
         return id;
     }

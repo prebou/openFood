@@ -17,6 +17,16 @@ public class Produit implements Serializable {
     public Produit() {
     }
 
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Produit{");
+        sb.append("id=").append(id);
+        sb.append(", nom='").append(nom).append('\'');
+        sb.append(", energie=").append(energie);
+        sb.append('}');
+        return sb.toString();
+    }
+
     public int getId() {
         return id;
     }

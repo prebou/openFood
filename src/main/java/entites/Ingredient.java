@@ -17,6 +17,16 @@ public class Ingredient implements Serializable {
     public Ingredient() {
     }
 
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Ingredient{");
+        sb.append("id=").append(id);
+        sb.append(", nom='").append(nom).append('\'');
+        sb.append(", percent=").append(percent);
+        sb.append('}');
+        return sb.toString();
+    }
+
     public int getId() {
         return id;
     }
