@@ -11,6 +11,7 @@ public class Ingredient implements Serializable {
     private String nom;
     //@Column(name ="PERCENT")
     private Double percent;
+
     /**
      * constructeur vide pour jpa
      */
