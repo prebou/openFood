@@ -17,6 +17,16 @@ public class Quantite implements Serializable {
     public Quantite() {
     }
 
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Quantite{");
+        sb.append("id=").append(id);
+        sb.append(", poid=").append(poid);
+        sb.append(", piece=").append(piece);
+        sb.append('}');
+        return sb.toString();
+    }
+
     public int getId() {
         return id;
     }

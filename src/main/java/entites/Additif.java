@@ -15,6 +15,15 @@ public class Additif implements Serializable {
     public Additif() {
     }
 
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Additif{");
+        sb.append("id=").append(id);
+        sb.append(", nom='").append(nom).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
+
     public int getId() {
         return id;
     }

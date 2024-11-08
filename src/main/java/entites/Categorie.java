@@ -15,6 +15,15 @@ public class Categorie implements Serializable {
     public Categorie() {
     }
 
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Categorie{");
+        sb.append("id=").append(id);
+        sb.append(", nomCategorie='").append(nomCategorie).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
+
     public int getId() {
         return id;
     }

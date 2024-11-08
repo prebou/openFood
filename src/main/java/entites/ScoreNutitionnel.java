@@ -15,6 +15,15 @@ public class ScoreNutitionnel implements Serializable {
     public ScoreNutitionnel() {
     }
 
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("ScoreNutitionnel{");
+        sb.append("id=").append(id);
+        sb.append(", score='").append(score).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
+
     public int getId() {
         return id;
     }
