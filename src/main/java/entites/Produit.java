@@ -2,19 +2,19 @@ package entites;
 import jakarta.persistence.*;
 import java.io.Serializable;
 @Entity
-@Table(name = "INGREDIENT")
-public class Ingredient implements Serializable {
+@Table(name = "PRODUIT")
+public class Produit implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    //@Column(name ="NOM")
+    @Column(name ="NOM")
     private String nom;
-    //@Column(name ="PERCENT")
-    private Double percent;
+    @Column(name ="ENERGIE")
+    private double energie;
     /**
      * constructeur vide pour jpa
      */
-    public Ingredient() {
+    public Produit() {
     }
 
     public int getId() {
@@ -33,11 +33,11 @@ public class Ingredient implements Serializable {
         this.nom = nom;
     }
 
-    public Double getPercent() {
-        return percent;
+    public double getEnergie() {
+        return energie;
     }
 
-    public void setPercent(Double percent) {
-        this.percent = percent;
+    public void setEnergie(double energie) {
+        this.energie = energie;
     }
 }
