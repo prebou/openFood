@@ -2,28 +2,27 @@ package entites;
 import jakarta.persistence.*;
 import java.io.Serializable;
 @Entity
-@Table(name = "INGREDIENT")
-public class Ingredient implements Serializable {
+@Table(name = "PRODUIT")
+public class Produit implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    //@Column(name ="NOM")
+    @Column(name ="NOM")
     private String nom;
-    //@Column(name ="PERCENT")
-    private Double percent;
-
+    @Column(name ="ENERGIE")
+    private double energie;
     /**
      * constructeur vide pour jpa
      */
-    public Ingredient() {
+    public Produit() {
     }
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Ingredient{");
+        final StringBuilder sb = new StringBuilder("Produit{");
         sb.append("id=").append(id);
         sb.append(", nom='").append(nom).append('\'');
-        sb.append(", percent=").append(percent);
+        sb.append(", energie=").append(energie);
         sb.append('}');
         return sb.toString();
     }
@@ -44,11 +43,11 @@ public class Ingredient implements Serializable {
         this.nom = nom;
     }
 
-    public Double getPercent() {
-        return percent;
+    public double getEnergie() {
+        return energie;
     }
 
-    public void setPercent(Double percent) {
-        this.percent = percent;
+    public void setEnergie(double energie) {
+        this.energie = energie;
     }
 }
