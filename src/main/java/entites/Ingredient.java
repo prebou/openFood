@@ -14,11 +14,6 @@ public class Ingredient implements Serializable {
     private String nom;
     @Column(name ="PERCENT")
     private Double percent;
-    /**
-     * lien oone to many ingrédient quantité
-     */
-    @OneToMany(mappedBy = "ingredient")
-    private Set<Quantite> quantites;
 
     @ManyToMany(mappedBy = "ingredients")
     private Set<Produit> produits = new HashSet<>();
