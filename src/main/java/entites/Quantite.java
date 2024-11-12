@@ -11,6 +11,10 @@ public class Quantite implements Serializable {
     private double poid;
     @Column(name ="PIECE")
     private int piece;
+
+    @ManyToOne
+    @JoinColumn(name = "ID")
+    private Ingredient ingredient;
     /**
      * constructeur vide pour jpa
      */

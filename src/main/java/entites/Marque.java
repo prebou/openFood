@@ -7,10 +7,16 @@ public class Marque implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    //@Column(name ="NOM")
+    @Column(name ="NOM")
     private String nomMarque;
-    //@Column(name ="DATEAPPARITION")
+    @Column(name ="DATEAPPARITION")
     private String dateApparition;
+    /**
+     * oncrée le lien many to one de marque a produit
+     */
+    @ManyToOne
+    @JoinColumn(name = "ID")
+    private Produit produit;
     /**
      * constructeur vide pour jpa
      */

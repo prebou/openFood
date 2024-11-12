@@ -1,15 +1,20 @@
 package entites;
 import jakarta.persistence.*;
 import java.io.Serializable;
-//@Entity
-//@Table(name = "ALLERGENE")
+import java.util.HashSet;
+import java.util.Set;
+
+@Entity
+@Table(name = "ALLERGENE")
 public class Allergene implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column(name ="COMPOSITION")
     private String composition;
-
+    //lien any to many allergene produit
+    @ManyToMany(mappedBy = "allergenes")
+    private Set<Produit> produits = new HashSet<>();
     /**
      * constructeur vide pour jpa
      */
