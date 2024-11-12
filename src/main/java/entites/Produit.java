@@ -1,6 +1,9 @@
 package entites;
 import jakarta.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Table(name = "PRODUIT")
 public class Produit implements Serializable {
@@ -10,7 +13,47 @@ public class Produit implements Serializable {
     @Column(name ="NOM")
     private String nom;
     @Column(name ="ENERGIE")
+    /**
+     * lien one to many pour le lien produit to category
+     */
+    @OneToMany(mappedBy = "produit")
+    private Set<Categorie> categories;
+    /*
+    *lien one to many a marque
+     */
+    @OneToMany(mappedBy = "produit")
+    private Set<Marque> marque;
+    /**
+     * lien
+     */
+    @OneToMany(mappedBy = "produit")
+    private Set<ScoreNutitionnel> scoreNutitionnels;
+
     private double energie;
+
+    @ManyToMany
+    @JoinTable(
+            name = "produit_additif",
+            joinColumns = @JoinColumn(name = "produit_id"),
+            inverseJoinColumns = @JoinColumn(name = "additif_id")
+    )
+
+    private Set<Additif> additifs = new HashSet<>();
+    @ManyToMany
+    @JoinTable(
+            name = "produit_allergene",
+            joinColumns = @JoinColumn(name = "produit_id"),
+            inverseJoinColumns = @JoinColumn(name = "allergene_id")
+    )
+    private Set<Allergene> allergenes = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(
+            name = "produit_ingredient",
+            joinColumns = @JoinColumn(name = "produit_id"),
+            inverseJoinColumns = @JoinColumn(name = "ingredient_id")
+    )
+    private Set<Ingredient> ingredients = new HashSet<>();
     /**
      * constructeur vide pour jpa
      */

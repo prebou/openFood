@@ -1,6 +1,9 @@
 package entites;
 import jakarta.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Table(name = "ADDITIF")
 public class Additif implements Serializable {
@@ -9,6 +12,8 @@ public class Additif implements Serializable {
     private int id ;
     @Column(name ="NOM")
     private String nom;
+    @ManyToMany(mappedBy = "additifs")
+    private Set<Produit> produits = new HashSet<>();
     /**
      * constructeur vide pour jpa
      */

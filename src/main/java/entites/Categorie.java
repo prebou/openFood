@@ -10,6 +10,17 @@ public class Categorie implements Serializable {
     @Column(name ="NOMCATEG")
     private String nomCategorie;
     /**
+     * many to one de categ
+     */
+    @ManyToOne
+    @JoinColumn(name = "ID")
+    private Produit produit;
+    /**
+     *
+     */
+
+
+    /**
      * constructeur vide pour jpa
      */
     public Categorie() {
