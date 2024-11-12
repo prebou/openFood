@@ -1,17 +1,22 @@
 package entites;
 import jakarta.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Table(name = "INGREDIENT")
 public class Ingredient implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    //@Column(name ="NOM")
+    @Column(name ="NOM")
     private String nom;
-    //@Column(name ="PERCENT")
+    @Column(name ="PERCENT")
     private Double percent;
 
+    @ManyToMany(mappedBy = "ingredients")
+    private Set<Produit> produits = new HashSet<>();
     /**
      * constructeur vide pour jpa
      */
