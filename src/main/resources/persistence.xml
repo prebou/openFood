@@ -3,6 +3,16 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_1.xsd"
              version="3.1">
+    <persistence-unit name="bdd1" transaction-type="RESOURCE_LOCAL">
+    <class>entites.Produit</class>
+    <class>entites.Additif</class>
+    <class>entites.Allergene</class>
+    <class>entites.Categorie</class>
+    <class>entites.Ingredient</class>
+    <class>entites.Marque</class>
+    <class>entites.Quantite</class>
+    <class>entites.ScoreNutitionnel</class>
+
 <persistence-unit name="bdd2">
 <properties>
     <property name="jakarta.persistence.jdbc.url"
