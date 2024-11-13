@@ -5,14 +5,14 @@
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_1.xsd"
              version="3.1">
 
-    <persistence-unit name="bdd">
+    <persistence-unit name="bdd2">
         <properties>
             <property name="jakarta.persistence.jdbc.url"
                       value="jdbc:mariadb://localhost:3306/openfoodfactory"/>
             <property name="jakarta.persistence.jdbc.user"
                       value="root"/>
             <property name="jakarta.persistence.jdbc.password"
-                      value=""/>
+                      value="root"/>
 
             <property name="jakarta.persistence.jdbc.driver"
                       value="org.mariadb.jdbc.Driver"/>

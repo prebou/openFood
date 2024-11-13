@@ -10,9 +10,12 @@ public class Produit implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name ="IDNUTRITIONEL")
+    private int idNutritionel;
     @Column(name ="NOM")
     private String nom;
     @Column(name ="ENERGIE")
+    private double energie;
     /**
      * lien one to many pour le lien produit to category
      */
@@ -26,10 +29,16 @@ public class Produit implements Serializable {
     /**
      * lien
      */
-    @OneToMany(mappedBy = "produit")
-    private Set<ScoreNutitionnel> scoreNutitionnels;
+    //maivais sens
+    //@OneToMany(mappedBy = "produit")
+    //@JoinColumn(name="IDNUTRITIONEL")
+    //private Set<ScoreNutitionnel> scoreNutitionnels = new HashSet<>();
 
-    private double energie;
+
+    @ManyToOne
+    @JoinColumn(name = "scorenutritionnel_id", nullable = false) // clé étrangère
+    private ScoreNutitionnel scoreNutitionnel;
+
 
     @ManyToMany
     @JoinTable(

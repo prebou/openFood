@@ -9,8 +9,6 @@ public class Marque implements Serializable {
     private int id;
     @Column(name ="NOM")
     private String nomMarque;
-    @Column(name ="DATEAPPARITION")
-    private String dateApparition;
     /**
      * oncrée le lien many to one de marque a produit
      */
@@ -28,7 +26,7 @@ public class Marque implements Serializable {
         final StringBuilder sb = new StringBuilder("Marque{");
         sb.append("id=").append(id);
         sb.append(", nomMarque='").append(nomMarque).append('\'');
-        sb.append(", dateApparition='").append(dateApparition).append('\'');
+
         sb.append('}');
         return sb.toString();
     }
@@ -49,11 +47,4 @@ public class Marque implements Serializable {
         this.nomMarque = nomMarque;
     }
 
-    public String getDateApparition() {
-        return dateApparition;
-    }
-
-    public void setDateApparition(String dateApparition) {
-        this.dateApparition = dateApparition;
-    }
 }
