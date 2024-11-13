@@ -14,14 +14,9 @@ import java.util.regex.Pattern;
  * */
 public class Decompose {
 
-    ArrayList<String> categories;
-    ArrayList<String> marques;
-    ArrayList<String> ingredients;
-    ArrayList<String> allergenes;
-    ArrayList<String> additifs;
-    ArrayList<String> produits;
-    ArrayList<String> nutritionGrades;
-    ArrayList<Double> energies;
+    private ArrayList<String> categories, marques, ingredients,
+            allergenes, additifs, produits, nutritionGrades;
+    private ArrayList<Double> energies;
 
 
     {
@@ -107,7 +102,6 @@ public class Decompose {
                 //ingredient = ingredient.replaceAll("_","");
                 ingredient = ingredient.replaceAll("[_\\[\\]?*\\-]","");
                 //System.out.println("Ingredients : " + ingredient);
-
                 ingredients.add(ingredient);
 
             }
