@@ -9,8 +9,6 @@ public class Marque implements Serializable {
     private int id;
     @Column(name ="NOM")
     private String nomMarque;
-    @Column(name ="DATEAPPARITION")
-    private String dateApparition;
     /**
      * oncrée le lien many to one de marque a produit
      */
