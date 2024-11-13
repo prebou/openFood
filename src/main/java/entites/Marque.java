@@ -1,6 +1,9 @@
 package entites;
 import jakarta.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Table(name = "MARQUE")
 public class Marque implements Serializable {
@@ -12,8 +15,8 @@ public class Marque implements Serializable {
     /**
      * oncrée le lien many to one de marque a produit
      */
-    @ManyToOne
-    @JoinColumn(name = "ID")
+    @OneToMany(mappedBy = "marque", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Produit> produits = new HashSet<>();
     private Produit produit;
     /**
      * constructeur vide pour jpa

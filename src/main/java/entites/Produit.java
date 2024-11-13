@@ -19,13 +19,21 @@ public class Produit implements Serializable {
     /**
      * lien one to many pour le lien produit to category
      */
+
+    @ManyToOne
+    @JoinColumn(name = "categorie_id")
+    private Categorie categorie;
+    /*
     @OneToMany(mappedBy = "produit")
-    private Set<Categorie> categories;
+    private Set<Categorie> categories;*/
     /*
     *lien one to many a marque
      */
-    @OneToMany(mappedBy = "produit")
-    private Set<Marque> marque;
+    /*@OneToMany(mappedBy = "produit")
+    private Set<Marque> marque;*/
+    @ManyToOne
+    @JoinColumn(name = "marque_id")
+    private Marque marque;
     /**
      * lien
      */
