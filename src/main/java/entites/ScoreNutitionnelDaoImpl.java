@@ -1,4 +1,4 @@
-package dao.impl;
+package entites;
 
 import entites.ScoreNutitionnel;
 import jakarta.persistence.EntityManager;

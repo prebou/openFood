@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.ehcache.org/ehcache.xsd">
+<config>
 
   <!-- Cache pour les recherches d'aliments -->
   <cache alias="searchFoodCache"
          maxEntriesLocalHeap="5000"
-         timeToLiveSeconds="600" /> <!-- Cache les résultats des recherches pendant 10 minutes -->
+         timeToLiveSeconds="600"/> <!-- Cache les résultats des recherches pendant 10 minutes -->
 
   <!-- Cache pour les informations nutritionnelles des aliments -->
   <cache alias="nutritionInfoCache"
          maxEntriesLocalHeap="5000"
-         timeToLiveSeconds="3600" /> <!-- Cache les infos nutritionnelles pendant 1 heure -->
+         timeToLiveSeconds="3600"/> <!-- Cache les infos nutritionnelles pendant 1 heure -->
 
   <!-- Cache pour les Nutri-Score calculés -->
   <cache alias="nutriScoreCache"
          maxEntriesLocalHeap="5000"
-         timeToLiveSeconds="3600" /> <!-- Cache les scores pendant 1 heure -->
+         timeToLiveSeconds="3600"/> <!-- Cache les scores pendant 1 heure -->
 
-</ehcache>
+</config>

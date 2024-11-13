@@ -1,4 +1,4 @@
-package dao.impl;
+package entites;
 
 import entites.Allergene;
 import jakarta.persistence.EntityManager;

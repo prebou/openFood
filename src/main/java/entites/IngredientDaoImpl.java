@@ -1,4 +1,4 @@
-package dao.impl;
+package entites;
 
 import entites.Ingredient;
 import jakarta.persistence.EntityManager;

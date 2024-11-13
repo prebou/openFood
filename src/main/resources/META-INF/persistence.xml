@@ -2,27 +2,20 @@
 <persistence xmlns="https://jakarta.ee/xml/ns/persistence"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
-             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_1.xsd"
-             version="3.1">
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
     <persistence-unit name="bdd">
-
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
-            <property name="jakarta.persistence.jdbc.url"
-                      value="jdbc:mariadb://localhost:3306/openfoodfactory"/>
-            <property name="jakarta.persistence.jdbc.user"
-                      value="root"/>
-            <property name="jakarta.persistence.jdbc.password"
-                      value=""/>
-            <property name="jakarta.persistence.jdbc.driver"
-                      value="org.mariadb.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mariadb://localhost:3307/openfoodfact"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value=""/>
+            <property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
             <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
-
         </properties>
-
-
     </persistence-unit>
     <persistence-unit name="bdd1" transaction-type="RESOURCE_LOCAL">
         <class>entites.Produit</class>
@@ -31,7 +24,6 @@
         <class>entites.Categorie</class>
         <class>entites.Ingredient</class>
         <class>entites.Marque</class>
-        <class>entites.Quantite</class>
         <class>entites.ScoreNutitionnel</class>
     </persistence-unit>
     <persistence-unit name="yukaPU">
@@ -43,6 +35,7 @@
             <property name="hibernate.cache.jcache.provider" value="org.ehcache.jsr107.EhcacheCachingProvider"/>
             <property name="hibernate.cache.jcache.config" value="classpath:ehcache.xml"/>
             <property name="hibernate.cache.provider_configuration_file_resource_path" value="ehcache.xml"/>
+
 
             <!-- Configuration JDBC -->
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/yuka"/>
