@@ -1,6 +1,9 @@
 package entites;
 import jakarta.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Table(name = "CATEGORIE")
 public class Categorie implements Serializable {
@@ -12,13 +15,14 @@ public class Categorie implements Serializable {
     /**
      * many to one de categ
      */
-    @ManyToOne
-    @JoinColumn(name = "ID")
-    private Produit produit;
+//    @ManyToOne
+//    @JoinColumn(name = "ID")
+//    private Produit produit;
+    @OneToMany(mappedBy = "categorie")
+    private Set<Produit> produits = new HashSet<>();
     /**
      *
      */
-
 
     /**
      * constructeur vide pour jpa
