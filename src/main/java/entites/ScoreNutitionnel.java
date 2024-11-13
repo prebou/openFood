@@ -16,8 +16,6 @@ public class ScoreNutitionnel implements Serializable {
     /**
      * lien many to one score nutritionel
      */
-    /*@OneToMany(mappedBy = "ScoreNutritionnel")
-    private Set<Produit> produits;*/
 
 
      //on as inverser le sens des lien celui la fonctionne mais amuvais sens

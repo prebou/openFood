@@ -29,14 +29,11 @@ public class Produit implements Serializable {
     /**
      * lien
      */
-
-
-
+    //maivais sens
     //@OneToMany(mappedBy = "produit")
     //@JoinColumn(name="IDNUTRITIONEL")
     //private Set<ScoreNutitionnel> scoreNutitionnels = new HashSet<>();
-    /*@ManyToOne
-   private ScoreNutitionnel scoreNutitionnels;*/
+
 
     @ManyToOne
     @JoinColumn(name = "scorenutritionnel_id", nullable = false) // clé étrangère
