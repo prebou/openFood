@@ -10,6 +10,8 @@ public class Produit implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name ="IDNUTRITIONEL")
+    private int idNutritionel;
     @Column(name ="NOM")
     private String nom;
     @Column(name ="ENERGIE")

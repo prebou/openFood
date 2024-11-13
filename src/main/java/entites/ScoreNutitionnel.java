@@ -14,7 +14,7 @@ public class ScoreNutitionnel implements Serializable {
      * lien many to one score nutritionelle
      */
     @ManyToOne
-    @JoinColumn(name = "ID")
+    @JoinColumn(name = "IDNUTRITIONEL")
     private Produit produit;
     /**
      * constructeur vide pour JPA

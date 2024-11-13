@@ -11,7 +11,7 @@ public class App {
 //        entityManager.close();
 //        managerFactory.close();
 //    }
-    //utilisation du dao théorique pour la création en bdd
+    utilisation du dao théorique pour la création en bdd
     public static void main(String[] args) {
     EntityManagerFactory managerFactory = Persistence.createEntityManagerFactory("bdd2");
     EntityManager entityManager = managerFactory.createEntityManager();
