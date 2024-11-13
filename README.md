@@ -10,7 +10,7 @@ Bonjour et bienvenue sur le projet openfoodFactory
 
     nous allons voir ci dessous l'etape de création des entitée et la couche DAO:
 
-j'ai etablie les entitée sur le modele de base de donnée que nous avions etablie nous etions partie sur un modele de donnée en etoile avec le produit bien que a l'origine nous avion etablie une entité quantité elle c'est averer inutile par la suite pourl'utilisation du mapping la génération ce fait a partir de la class app la public static void main(String[] args) permet de créer les entitées. j'ai ensuite créer une couche dao pour Créer une interface générique qui permet de géré le crud en passant par une classe abstraite . a l'heure ou ce message est ecrit toutes les fonctionnalité ne sont pas encore implenter l'appli n'est donc pas tester dans sa globalité.
+j'ai etablie les entitée sur le modele de base de donnée que nous avions etablie nous etions partie sur un modele de donnée en etoile avec le produit bien que a l'origine nous avion etablie une entité quantité elle c'est averer inutile par la suite pourl'utilisation du mapping la génération ce fait a partir de la class app la public static void main(String[] args) permet de créer les entitées. j'ai ensuite créer une couche DAO pour Créer une interface générique qui permet de géré le crud en passant par une classe abstraite . a l'heure ou ce message est ecrit toutes les fonctionnalité ne sont pas encore implenter l'appli n'est donc pas tester dans sa globalité.
 
     nous allons voir ci dessous l'etape de trie de la bdd:
 
