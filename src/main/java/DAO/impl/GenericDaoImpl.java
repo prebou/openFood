@@ -1,5 +1,5 @@
-package dao.impl;
-import dao.Dao;
+package DAO.impl;
+import DAO.Dao;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import java.util.List;

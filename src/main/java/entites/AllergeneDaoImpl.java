@@ -1,9 +1,8 @@
 package entites;
 
-import entites.Allergene;
 import jakarta.persistence.EntityManager;
 
-public class AllergeneDaoImpl extends dao.impl.GenericDaoImpl<Allergene> {
+public class AllergeneDaoImpl extends DAO.impl.GenericDaoImpl<Allergene> {
     public AllergeneDaoImpl(EntityManager entityManager) {
         super(entityManager, Allergene.class);
     }
