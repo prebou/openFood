@@ -24,7 +24,6 @@ public class Categorie implements Serializable {
      *
      */
 
-
     /**
      * constructeur vide pour jpa
      */
