@@ -22,5 +22,7 @@ J'ai développé une classe nommée 'Decompose' pour nettoyer un fichier CSV. J'
 - #### nous allons voir ci dessous l'etape de cache:
 L'étape de cache se décompense en plusieurs étapes : 
 1 . Ajouter Ehcache comme dépendance dans le fichier pom.xml
-2 . Configurer Ehcache avec un fichier XML --> ehcache.xml (Suppression de la définition de schéma dans le fichier XML d'Ehcache. Ehcache fonctionne souvent sans avoir besoin de valider un schéma à chaque lancement. Si le fichier ehcache.xml ne comporte pas de définition de schéma, Ehcache pourra tout de même lire et appliquer la configuration correctement.)
-3 . Créer et initialiser Ehcache dans l'application 
+2 . Configurer le fichier persistance.xml
+3 . Configurer Ehcache avec un fichier XML --> ehcache.xml 
+4 . Créer et initialiser Ehcache dans l'application (Suppression de la définition de schéma dans le fichier XML d'Ehcache. Ehcache fonctionne souvent sans avoir besoin de valider un schéma à chaque lancement. Si le fichier ehcache.xml ne comporte pas de définition de schéma, Ehcache pourra tout de même lire et appliquer la configuration correctement.)
+5 . Optimiser les performances des lectures répétés des aliments (classe aliments)

@@ -6,6 +6,7 @@
          maxEntriesLocalHeap="5000"
          timeToLiveSeconds="600"/> <!-- Cache les résultats des recherches pendant 10 minutes -->
 
+
   <!-- Cache pour les informations nutritionnelles des aliments -->
   <cache alias="nutritionInfoCache"
          maxEntriesLocalHeap="5000"
